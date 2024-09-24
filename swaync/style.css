@@ -1,0 +1,399 @@
+
+* {
+  font-family: pretendard;
+  background-color: transparent;
+  all: unset;
+}
+
+.control-center .notification-row:focus,
+.control-center .notification-row:hover {
+  opacity: 1;
+  background: rgb(44, 44, 44);
+  border-radius: 15px;
+}
+
+
+
+.notification.low {
+  background: rgba(46, 46, 46, 0.582);
+  border: 0px solid rgba(107, 107, 107, 0.979);
+  border-radius: 14px;
+  margin: 9px;
+  }
+  
+.notification.critical {
+  background: rgba(179, 142, 142, 0.705);
+  border: .14rem solid #ffa5a5;
+  padding: 4px;
+  border-radius: 15px;
+  color: black;
+  margin: 3px 3px 3px 3px;
+  animation-name: blinkp;
+animation-duration:.3s;
+animation-timing-function: linear;
+animation-iteration-count: 10;
+animation-direction: alternate;
+animation-fill-mode: forwards;
+
+
+}
+
+
+@keyframes blinkp {
+  from {
+   background-color: rgba(126, 66, 66, 0.726);
+   text-shadow: 0 0 16px rgb(255, 102, 0);
+  }
+  to {
+
+    color: #edff47;
+    background-color: rgb(192, 88, 84);
+   text-shadow: 0 0 4px rgba(131, 57, 57, 0.658);
+
+
+}
+}
+
+
+
+.notification.normal {
+    background: rgba(46, 46, 46, 0.582);
+    border: 0px solid rgba(107, 107, 107, 0.979);
+    border-radius: 15px;
+    margin: 8px;
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0);
+    padding: 4px;
+  }
+  
+.notification-content {
+  background: transparent;
+}
+
+.notification-default-action {
+  margin: 0;
+  padding: 0;
+  border-radius: 5px;
+}
+
+.close-button {
+
+  color: red;
+  text-shadow: none;
+  padding: 0px;
+  border-radius: 12px;
+  margin-top: 10px;
+  margin-right: 9px;
+}
+
+.close-button:hover {
+  box-shadow: none;
+
+  transition: all 0.15s ease-in-out;
+  border: none;
+}
+
+.notification-action {
+  border: 2px solid #34548a;
+  border-top: none;
+  border-radius: 5px;
+}
+
+.notifcation-group {
+  background-color: black;
+}
+
+.notification-default-action:hover,
+.notification-action:hover {
+ text-shadow: 0 0 4px white;
+  background-color: rgba(66, 133, 52, 0);
+ 
+
+}
+
+.notification-default-action {
+  border-radius: 5px;
+  margin: 0px;
+}
+
+.notification-default-action:not(:only-child) {
+  border-bottom-left-radius: 7px;
+  border-bottom-right-radius: 7px;
+}
+
+.notification-action:first-child {
+  border-bottom-left-radius: 10px;
+  background: #1b1b2b;
+}
+
+.notification-action:last-child {
+  border-bottom-right-radius: 10px;
+  background: #1b1b2b;
+}
+
+.inline-reply {
+  margin-top: 8px;
+}
+
+.inline-reply-entry {
+  background: @noti-bg-darker;
+  color: @text-color;
+  caret-color: @text-color;
+  border: 1px solid @noti-border-color;
+  border-radius: 5px;
+}
+
+.inline-reply-button {
+  margin-left: 4px;
+  background: white;
+  border: 1px solid @noti-border-color;
+  border-radius: 5px;
+  color: black;
+}
+
+.inline-reply-button:disabled {
+  background: initial;
+  color: @text-color-disabled;
+  border: 1px solid transparent;
+}
+
+.inline-reply-button:hover {
+  background: @noti-bg-hover;
+}
+
+.image {
+  border-radius: 12px;
+  margin: 4;
+  margin-right: 12px;
+  background-color: rgba(0, 0, 0, 0.377);
+}
+
+.summary {
+  margin-left: 4;
+  font-size: 14px;
+  font-weight: 700;
+  background: transparent;
+  color: rgb(255, 255, 255);
+  text-shadow: none;
+}
+
+
+
+.time {
+  font-size: 12px;
+  font-weight: 700;
+
+  color: rgba(255, 255, 255, 0.534);
+  background-color: rgba(0, 0, 0, 0);
+  text-shadow: none;
+  border-radius: 8;
+  margin-right: 3px;
+  padding: 4;
+}
+
+
+.body {
+  font-size: 12px;
+  font-weight: 500;
+  border-radius: 7;
+  background: rgba(0, 0, 0, 0);
+  padding: 5;
+  margin: 5;
+
+  text-shadow: none;
+}
+
+.body.critical {
+    font-size: 12px;
+    font-weight: 500;
+    border-radius: 5;
+    background: rgba(255, 54, 54, 0.39);
+    padding: 4px;
+    color: red;
+    text-shadow: none;
+  }
+.control-center {
+  background-color: rgba(0, 0, 0, 0);
+  border-radius: 15px;
+}
+
+.control-center-list {
+  background: transparent;
+}
+
+.control-center-list-placeholder {
+  opacity: 0.5;
+}
+
+.floating-notifications {
+  background: transparent;
+}
+
+.blank-window {
+  background: alpha(black, 0.1);
+}
+
+.widget-title {
+  color: #ffffff;
+  background: rgba(255, 255, 255, 0.226);
+  padding: 5px 10px;
+  margin: 10px 10px 5px 10px;
+  font-size: 1.5rem;
+  border-radius: 5px;
+}
+
+.widget-title>button {
+  font-size: 1rem;
+  color: @text-color;
+  text-shadow: none;
+  background: @noti-bg;
+  box-shadow: none;
+  border-radius: 5px;
+}
+
+.widget-title>button:hover {
+  background: #f7768e;
+  color: @cc-bg;
+}
+
+.widget-dnd {
+  
+  background: rgba(0, 0, 0, 0);
+  padding: 10px 10px;
+  margin: 10px;
+  border-radius: 12px;
+  font-size: 16px;
+  color: #ffffff;
+ 
+}
+
+
+.widget-dnd>switch {
+  border-radius: 8px;
+  background: #98ff68;
+  padding: 4px;
+  color: transparent;
+}
+
+.widget-dnd>switch:checked {
+  background: #f7768e;
+  border-radius: 8px;
+  margin: 0;
+}
+
+.widget-dnd>switch slider {
+  
+  background: @cc-bg;
+  border-radius: 8px;
+}
+
+.widget-dnd>switch:checked slider {
+  background: @cc-bg;
+  border-radius: 8px;
+}
+
+.widget-label {
+  margin: 10px 10px 5px 10px;
+}
+
+.widget-label>label {
+  font-size: 1rem;
+  color: @text-color;
+}
+
+.widget-mpris {
+  color: white;
+  padding: 8px 8px;
+  margin: 0px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  border-radius: 9px;
+  
+}
+
+.widget-mpris>box>button {
+  border-radius: 12px;
+padding: 0px;
+margin: 0px;
+  color: rgba(255, 255, 255, 0.295);
+}
+
+.widget-mpris-player {
+  margin-top:10px;
+  margin: 16px;
+  padding: 30px;
+  border-radius: 12px;
+  background-color: rgba(0, 0, 0, 0.527);
+}
+
+.widget-mpris-title {
+  font-weight: 700;
+  font-size: 1.25rem;
+}
+
+.widget-mpris-subtitle {
+  font-size: 1.1rem;
+}
+
+.widget-buttons-grid {
+  font-size: 38px;
+  font-family: pretendard;
+  padding: 10px;
+margin: 0;
+  border-radius: 5px;
+background-color: transparent;
+}
+
+.widget-buttons-grid>flowbox>flowboxchild>button {
+  margin: 4px;
+  background: rgba(0, 0, 0, 0);
+  border-radius: 5px;
+  color: rgba(255, 255, 255, 0.199);
+  padding-top: 8px;
+  padding-bottom: 8px;
+
+  padding-left: 6px;
+  padding-right: 7px;
+  transition: 300ms
+}
+
+.widget-buttons-grid>flowbox>flowboxchild>button:hover {
+  background: rgba(0, 0, 0, 0);
+  color: rgba(129, 129, 129, 0.411);
+  
+}
+
+.widget-buttons-grid>flowbox>flowboxchild>button:checked {
+  background: rgba(255, 255, 255, 0);
+  color: rgb(255, 255, 255);
+  text-shadow: 0 0 4px white;
+  transition: 300ms;
+}
+
+.widget-menubar>box>.menu-button-bar>button {
+  border: none;
+  background: transparent;
+  transition: 300ms
+}
+
+.topbar-buttons>button {
+  border: none;
+  background: transparent;
+}
+
+.widget-volume {
+  background: rgba(0, 0, 0, 0.397);
+  padding: 5px;
+  border-radius: 5px;
+  font-size: 2rem;
+  color: #ffffff;
+  margin-left: 590px;
+}
+
+.widget-backlight {
+  background: @noti-bg-darker;
+  padding: 5px;
+  margin: 5px 10px;
+  border-radius: 5px;
+  font-size: 2rem;
+  color: #7aa2f7;
+}

@@ -1,0 +1,104 @@
+
+{  "include": "~/.config/waybar/hardwaremodules",
+      "name": "status",
+
+    "layer": "top", // Waybar at top layer
+    "position": "bottom", // Waybar position (top|bottom|left|right)
+  "height": 3, // Waybar height (to be removed for auto height)
+ // "width": 2, // Waybar width
+   "spacing": 0, // Gaps between modules (4px)
+   // Choose the order of the modules
+   "margin": "0 0 0 0",
+   "modules-right": ["","","",""],
+   "modules-center": ["hyprland/window#b",""],
+   "modules-left": ["","","","","",""],
+   // Modules configuration
+
+   "network#stats2": {
+    // "interface": "wlp2*", // (Optional) To force the use of this interface
+    "format-wifi": "{essid}      <span  foreground='#ffbb59'>{frequency}Ghz</span>    <span  foreground='#d0ff96'>   {bandwidthUpBits}</span>       <span  foreground='#96c7ff'>   {bandwidthDownBits}</span> ",
+    "format-ethernet": "{ipaddr}/{cidr} ",
+    "tooltip-format": "{ifname} via {gwaddr} ",
+    "format-linked": "{ifname} (No IP) ",
+    "format-disconnected": "Disconnected ⚠",
+    "format-alt": "  "
+   },
+
+
+"hyprland/window#b": {
+    "format": "",
+    "rewrite": {
+        
+        "(.*) - osu!": "osu",
+        "(.*) — Mozilla Firefox": "🌎 $1",
+        "(.*) — Ablaze Floorp": "Floorp Web Browser",
+        "(.*) - fish": "> [$1]"
+    },
+    "separate-outputs": true
+    
+},
+
+
+"wlr/taskbar": {
+	"format": "{icon}",
+	"icon-size": 48,
+
+	"tooltip-format": "{title}",
+	"on-click": "activate",
+	"on-click-middle": "close",
+	"ignore-list": [
+	    "Alacritty"
+	],
+	"app_ids-mapping": {
+		"firefoxdeveloperedition": "firefox-developer-edition"
+	},
+	"rewrite": {
+		"Firefox Web Browser": "Firefox",
+		"Foot Server": "Terminal"
+	}
+},
+
+
+"clock#time": {
+	"format": "\n{:%I:%M %p}"
+    
+  },
+
+
+  "cava": {
+    //        "cava_config": "$XDG_CONFIG_HOME/cava/cava.conf",
+            "framerate": 100,
+          // "autosens": 0,
+           "sensitivity": 3,
+            "sleep_timer": 40,
+            "interval": 1,
+            "bars": 3,
+            "lower_cutoff_freq": 50,
+            "higher_cutoff_freq": 21000,
+            "method": "pulse",
+            "rotate":0,
+            "source": "auto",
+            "stereo": true,
+            "hide_on_silence": false,
+            "reverse": false,
+            "bar_delimiter": 032,
+            "monstercat": true,
+            "waves": true,
+            "noise_reduction": 0.9,
+            "input_delay": 0,
+            "format-icons" : ["<span>▁</span>","▃","▄","<span foreground='#71D4FF'>▅</span>","<span foreground='#67D1FF'>▆</span>","<span foreground='#00B2FF'>█</span>" ],
+            "actions": {
+                       "on-click-right": "mode"
+                       }
+        },
+
+"user": {
+    "format": " {work_M}  ↑",
+    "interval": 60,
+    "height": 30,
+    "width": 30,
+    "icon": true,
+    "avatar": "~/Pictures/wallpapers/mountain.jpg"
+}
+}
+

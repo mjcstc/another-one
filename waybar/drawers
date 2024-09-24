@@ -1,0 +1,64 @@
+{
+
+    "custom/home": {
+        "format":"<span foreground='#fff' size='large'> 󰋜</span>",
+        "on-click": "nautilus & io.elementary.files",
+        "tooltip": false
+    },
+
+    "custom/downloads": {
+        "format":"<span foreground='#fff' size='large'>󰇚</span>",
+        "on-click": "nautilus ~/Downloads",
+        "tooltip": false
+    },
+
+    "custom/pictures": {
+        "format":"<span foreground='#fff' size='large'>󰋩</span>",
+        "on-click": "nautilus ~/Pictures & io.elementary.files ~/Pictures",
+        "tooltip": false
+    },
+
+    "custom/videos": {
+        "format":"<span foreground='#fff' size='large'>󰕧</span>",
+        "on-click": "nautilus ~/Videos & io.elementary.files ~/Videos",
+        "tooltip": false
+    },
+
+    "custom/config": {
+        "format":"<span foreground='#fff' size='large'>󰒓</span>",
+        "on-click": "nautilus ~/.config & io.elementary.files ~/.config",
+        "tooltip": false
+    },
+
+    "custom/user": {
+        "format":"<span foreground='#fff' size='large'>  </span>",
+        "on-click": " ",
+        "tooltip": false
+    },
+
+    "custom/reboot": {
+        "format":"<span foreground='#fff' size='large'> 󰑓  </span>",
+        "on-click": "systemctl reboot",
+        "tooltip": false
+    },
+
+    "custom/shutdown": {
+        "format":"<span foreground='#fff' size='large'> 󰤆  </span>",
+        "on-click": "systemctl shutdown",
+        "tooltip": false
+    },
+    
+    "custom/lock": {
+        "format":"<span foreground='#fff' size='large'> 󰌾  </span>",
+        "on-click": "hyprlock",
+        "tooltip": false
+    },
+    "custom/wofi": {
+        "format":"<span foreground='#fff' size='large'>󰀻</span>",
+        "on-click": "wofi",
+        "tooltip": false
+    },
+    
+
+    
+}
